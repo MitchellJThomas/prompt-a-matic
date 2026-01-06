@@ -1,0 +1,42 @@
+graph TD
+    %% Define Styles
+    classDef tier1 fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,color:black;
+    classDef tier2 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:black;
+    classDef tier3 fill:#fff3e0,stroke:#ef6c00,stroke-width:2px,color:black;
+    classDef code  fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:black;
+
+    %% --- Tier 1: Feature ---
+    Feature["<b>Feature Spec (Tier 1)</b><br/><i>Path: docs/specs/features/F-101/arch.md</i><br/>Actor: Architect"]:::tier1
+
+    %% --- Tier 2: Sub-Specs ---
+    SubSpecA["<b>Sub-Spec A (Tier 2: Backend)</b><br/><i>Path: .../F-101/backend-api.md</i><br/>Actor: Backend Lead"]:::tier2
+    SubSpecB["<b>Sub-Spec B (Tier 2: Frontend)</b><br/><i>Path: .../F-101/frontend-ui.md</i><br/>Actor: Frontend Lead"]:::tier2
+
+    %% --- Tier 3: Task Specs (Backend) ---
+    TaskA1["<b>Task Spec A.1 (Tier 3)</b><br/><i>Path: .../tasks/JIRA-501-schema.md</i><br/>Actor: Dev A"]:::tier3
+    TaskA2["<b>Task Spec A.2 (Tier 3)</b><br/><i>Path: .../tasks/JIRA-502-endpoints.md</i><br/>Actor: Dev B"]:::tier3
+
+    %% --- Tier 3: Task Specs (Frontend) ---
+    TaskB1["<b>Task Spec B.1 (Tier 3)</b><br/><i>Path: .../tasks/JIRA-601-widgets.md</i><br/>Actor: Dev C"]:::tier3
+    TaskB2["<b>Task Spec B.2 (Tier 3)</b><br/><i>Path: .../tasks/JIRA-602-client.md</i><br/>Actor: Dev D"]:::tier3
+
+    %% --- Implementation: Code ---
+    CodeA1("<b>Code Implementation</b><br/><i>src/db/migrations/001.sql</i>"):::code
+    CodeA2("<b>Code Implementation</b><br/><i>src/api/routes.go</i>"):::code
+    CodeB1("<b>Code Implementation</b><br/><i>src/web/Widget.tsx</i>"):::code
+    CodeB2("<b>Code Implementation</b><br/><i>src/web/client.ts</i>"):::code
+
+    %% --- Relationships ---
+    Feature -->|Defines Vision| SubSpecA
+    Feature -->|Defines Vision| SubSpecB
+
+    SubSpecA -->|Component Breakdown| TaskA1
+    SubSpecA -->|Component Breakdown| TaskA2
+
+    SubSpecB -->|Component Breakdown| TaskB1
+    SubSpecB -->|Component Breakdown| TaskB2
+
+    TaskA1 -->|Blueprint| CodeA1
+    TaskA2 -->|Blueprint| CodeA2
+    TaskB1 -->|Blueprint| CodeB1
+    TaskB2 -->|Blueprint| CodeB2

@@ -11,19 +11,19 @@ This repository provides structured prompts that transform LLM assistants into s
 ### 🧠 Brain-Storming
 Creative problem-solving and logical reasoning frameworks:
 
-- **creative-problem-solver.md** – Multi-stage creative thinking using JOOTS, conceptual slippage, and analogy-driven exploration
-- **logic-engine.md** – Ruthless logical deduction agent; strips personality for pure analytical reasoning
+- **creative_problem_solver.md** – Multi-stage creative thinking using JOOTS, conceptual slippage, and analogy-driven exploration
+- **logic_engine.md** – Ruthless logical deduction agent; strips personality for pure analytical reasoning
 - **lot.md** – Language of Thought strategy; structured premise enumeration and derivation
 
 ### 🚀 Project Initialization
 Prompts for launching new projects with clarity and structure:
 
 - **new_project.md** – Bootstrap workflow: dependency analysis → acceptance criteria → actionable plan
-- **project-scoping.md** – Socratic interview technique to extract comprehensive project requirements
-- **model-scoping.md** – Socratic questioning for defining software architecture
-- **logical-model.md** – Translates informal requirements into formal logical models (types, relations, invariants, temporal properties)
+- **project_scoping.md** – Socratic interview technique to extract comprehensive project requirements
+- **model_scoping.md** – Socratic questioning for defining software architecture
+- **logical_model.md** – Translates informal requirements into formal logical models (types, relations, invariants, temporal properties)
 - **fishbone.md** – SDLC risk analysis across six categories (People, Process, Tools, Materials, Environment, Measurement)
-- **AI-adoption.mmd** – Visual diagram of tiered spec-to-code workflow (Feature → Sub-specs → Tasks → Code)
+- **ai_adoption.mmd** – Visual diagram of tiered spec-to-code workflow (Feature → Sub-specs → Tasks → Code)
 
 ### 📋 Project Plans
 Continuation and execution strategies:
@@ -42,7 +42,7 @@ Reserved for future prompt categories:
 1. **Select a prompt** based on your current development phase
 2. **Inject the prompt** into your LLM code assistant's system context
 3. **Follow the framework** – each prompt contains its own workflow instructions
-4. **Combine prompts** as needed (e.g., use `creative-problem-solver.md` for ideation, then `new_project.md` for bootstrapping)
+4. **Combine prompts** as needed (e.g., use `creative_problem_solver.md` for ideation, then `new_project.md` for bootstrapping)
 
 ## Design Philosophy
 
